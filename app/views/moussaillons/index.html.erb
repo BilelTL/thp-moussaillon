@@ -1,0 +1,22 @@
+<h1>Index des Moussaillons</h1>
+
+<table class="table table-striped">
+	<tr>
+		<th>Moussaillon</th>
+		<th> Age </th>
+		<th>Equipe</th>
+	</tr>
+
+	<% @moussaillons.each do |moussaillon| %>
+	<tr>
+		<td><%= moussaillon.first_name %></td>
+		<td><%= moussaillon.age %> </td>
+		<td><%= moussaillon.likeness %> </td>
+		<td><%= link_to "Voir le profil", moussaillon_path(moussaillon.id) %></td>	
+		
+	</tr>
+	<% end %>
+</table>
+
+
+ 

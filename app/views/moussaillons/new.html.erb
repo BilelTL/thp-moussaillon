@@ -1,0 +1,9 @@
+<h1>Nouveau moussaillon</h1>
+ 
+<%= form_for @moussaillon, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+ <h2>Quel est ton prénom ?</h2>
+  <%= f.text_field :first_name %>
+  <h2>Quel âge as tu ?</h2>
+  <%= f.number_field :age %>
+  <%= f.submit "Create" %>
+<% end %>

@@ -1,0 +1,21 @@
+
+<h1>Edit Profile</h1>
+ 
+<%= form_for @moussaillon do |moussaillon| %>
+
+  <p><label>Nom du moussaillon</label></p>
+  <%= moussaillon.text_field :first_name %>
+
+  <p><label>Age du moussaillon</label></p>
+  <%= moussaillon.text_field :age %>
+
+  <p>Tu préfères quoi ?</p>
+  <%= moussaillon.radio_button(:likeness, "kebab") %>
+  <%= label(:likeness_kebab, "Je préfère les kebabs") %>
+  <%= moussaillon.radio_button(:likeness, "Kefta") %>
+  <%= label(:likeness_Humouss, "Je préfère les keftas") %>
+</br>
+  <%= link_to "Supprimer le moussaillon", @moussaillon, :method => :delete %>
+
+  <p><%= moussaillon.submit 'Mettre à jour' %></p>
+<% end %>

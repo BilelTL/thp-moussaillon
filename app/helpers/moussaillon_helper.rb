@@ -1,0 +1,2 @@
+module MoussaillonHelper
+end

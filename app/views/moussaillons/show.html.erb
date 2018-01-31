@@ -1,0 +1,7 @@
+<h1>Bienvenue sur le profil de <%= @moussaillon.first_name %> ! </h1>
+<p> <%= @moussaillon.first_name %> a <%= @moussaillon.age %> ans </p>
+
+<p>Ce moussaillon est un grand amateur de  <%=@moussaillon.likeness %>  </p>
+<%=link_to "Editer le profil", edit_moussaillon_path, class: "btn btn-lg btn-primary"%>
+<%=link_to "Retour à l'index", moussaillons_path, class: "btn btn-lg btn-primary" %>
+
